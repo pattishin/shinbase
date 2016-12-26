@@ -1,22 +1,8 @@
 // vendors
 var $ = require('jquery');
+var NavigationModule = require('./navigation');
 // singleton
 var navigation;
-
-/**
- * NavigationModule
- * TODO: separate into separate file
- */ 
-var NavigationModule = function() { 
-    var page = ''; 
-}
-NavigationModule.prototype = {
-    goTo: function(page) {
-        if (!page) { return; }
-        $('.js-tab-content').html(page);
-    }
-}
-
 
 function _navigateTo(page) {
     // force singleton service
@@ -42,3 +28,4 @@ function _initNavigationHandlers() {
 (function main() {
     $(document).ready(_initNavigationHandlers);
 })();
+
