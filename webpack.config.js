@@ -2,6 +2,9 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+    watch: false,
+    debug: true,
+    devtool: 'source-map',
     entry: [
         'babel-polyfill',
         './app/js/main'
@@ -10,8 +13,6 @@ module.exports = {
         publicPath: '/',
         filename: './dist/bundle.js'
     },
-    watch: true,
-    devtool: 'source-map',
     module: {
         loaders: [
             {
@@ -30,6 +31,10 @@ module.exports = {
             index: 'app/index.html'
         }
     },
-    debug: true
+    resolve: {
+        root:  path.resolve(__dirname, '..'),
+        extensions: ['', '.js'],
+        modulesDirectories: ["node_modules"]
+    }
 };
 
