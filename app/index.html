@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Patti Shin</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <style>
+            ul {
+                display: table;
+                list-style: none;
+                padding: 0;
+                margin: auto;
+            }
+            ul li {
+                display: table-cell;
+                box-sizing: border-box;
+                padding: 5px;
+            }
+            select {
+                margin: auto;
+                display: block;
+            }
+            .tab-content {
+                background-color: grey;
+                padding: 10px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-content js-main-content">
+            <h1>Back to Basics</h1>
+            <div class="choose-framework">
+                <select>
+                    <option value="vanilla" selected="selected">VanillaJS</option>
+                    <option value="react" disabled="disabled">ReactJS Coming Soon</option>
+                    <option value="angular" disabled="disabled">AngularJS Coming Soon</option>
+                </select>
+            </div>
+            <div class="navigation-content">
+                <ul class="navigation-links">
+                    <li class="js-about">About</li>
+                    <li class="js-community">Community</li>
+                    <li class="js-contact">Contact</li>
+                </ul>
+            </div>
+            <div class="js-tab-content">
+            </div>
+        </div>
+    </body>
+</html>
